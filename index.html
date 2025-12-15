@@ -18,26 +18,20 @@
             line-height: 1.5;   /* improves readability */
         }
 
-        /* Change h5 color */
-        h5 {
-            background-color: #fff3a0; /* soft yellow highlight */
-            display: inline-block;     /* keeps highlight tight to text */
-            padding: 4px 8px;
-        }
     </style>
 </head>
     
 <body>
 
 <h2>Elucidating Housing Conditions in NYC</h2>
-<h5>Author: Jui Shih | GSAPP Urban Planning | Urban Data and Informatics</h5>
+<h4>Author: Jui Shih | GSAPP Urban Planning | Urban Data and Informatics</h4>
     
 <h5>Background</h5>
 <p>The relationship between housing and health has long been recognized, with the condition of housing identified as a major determinant of quality of life, health, and well-being (WHO, 2018; D’Alessandro et al., 2020; Rolfe et al., 2020; City of New York, 2024; OHCHR, 2014). Substandard housing conditions—such as mold, persistent leaks, inadequate heating, pest infestations, and structural deterioration—are closely associated with adverse physical and mental health outcomes, particularly among low-income households, children, the elderly, and people with disabilities. In dense urban environments like New York City, these risks are intensified by aging building stock, high housing costs, and unequal access to resources for maintenance and repair.</p>
 <p>This project investigates housing conditions in New York City by examining patterns of housing violations, repeat offenses, and litigation activity from Housing Maintenance Code Violations, Housing Litigations and Housing Maintenance Code Violations NYCHA Properties datasets released by the Department of Housing Preservation and Development (HPD) and situating them within a broader social vulnerability framework. By spatially and statistically linking housing condition data with demographic and socio-economic indicators at the census tract level, the analysis seeks to illuminate where poor housing conditions are most concentrated, how persistently they occur, and which communities bear the greatest burden.</p>
 <br> <br> <!-- Hardcoded break tag, not the best practice, but in a pinch, it'll do what you need it to do -->
 
-<h5>Methodology and Data</h5>
+<h3>Methodology and Data</h3>
 <p>This project uses multiple housing conditions datasets documented by HPD available through the NYC Open Data portal as well as American Community Survey (ACS) datasets from multiple years. Datasets consist of Housing Maintenance Code Violations, Housing Litigations, and Housing Maintenance Code Violations NYCHA Properties released by HPD and ACS 5-Year Estimates from 2023, 2020, 2016, and 2012.</p>
 <p>These datasets were cleaned, filtered, and standardized to focus on selected violation codes associated with severe housing conditions, vacate orders, and systemic building-level issues. Housing litigation data were also incorporated to examine buildings with repeated or ongoing legal action, providing insight into enforcement escalation and unresolved housing problems. Interactive maps invite users to explore the spatial distribution of these violations, with additional notes appearing on hover.</p>
 <p>To contextualize housing conditions within a broader social vulnerability framework, multiple variables were extracted from the U.S. Census Bureau American Community Survey (ACS) 5-year estimates at the census tract level. Variables related to income, poverty, unemployment, education, disability status, housing tenure, rent burden, household composition, and limited English proficiency were selected and normalized to construct a social vulnerability index. All datasets were joined using GEOIDs and analyzed using Python and mapping techniques.</p>
@@ -45,11 +39,8 @@
     
 <h3>Mapping Housing Conditions</h3>
 <p>Explore what building violations exist in NYC and how they cluster across the 5 boroughs. Feel free to scroll and zoom in and out to find patterns. Every data point also has additional details - the violation code, short decription, their addresses, neighborhood, when violations were first investigated etc.</p>
-<iframe src="kepler_ViolationDistribution.html" width="750px"" style="border:none;"></iframe>
+<iframe src="kepler_ViolationDistribution.html" style="border:none;"></iframe>
     
-<center> <!-- I'm doing a center thingy to center my viz -->
-    <iframe src="pygalEX.htm" width="750px" height="390px" style="border:none;"></iframe>
-</center>
 <br> <br> <!-- Hardcoded break tag, not the best practice, but in a pinch, it'll do what you need it to do -->
 
     
