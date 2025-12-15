@@ -4,40 +4,52 @@
     <meta charset="UTF-8">
     <title>Elucidating Housing Conditions in NYC!</title>
 
-    <!-- This is an html comment, oh yeah, hi, this is where you might add css for styling -->
     <style>
         body {
             margin: 50px;
             font-family: Monospace, Helvetica, sans-serif;
             color: #000000;
         }
+
+        /* Make paragraph text smaller */
+        p {
+            font-size: 0.9rem;   /* ~14–15px */
+            line-height: 1.6;   /* improves readability */
+        }
+
+        /* Change h5 color */
+        h5 {
+            color: #2c7fb8;     /* muted blue – change as desired */
+        }
     </style>
-    </head>
+</head>
+    
 <body>
 
-<h4>Elucidating Housing Conditions in NYC</h4>
-<h5>Author: Jui Shih | GSAPP Urban Planning | Urban Data and Informatics </h5>
-<p>The relationship between housing and health has long been recognized, with the condition of housing identified as a major determinant of quality of life, health, and well-being (WHO, 2018; D’Alessandro et al., 2020; Rolfe et al., 2020; City of New York, 2024; OHCHR, 2014). Substandard housing conditions— such as mold, persistent leaks, inadequate heating, pest infestations, and structural deterioration—are closely associated with adverse physical and mental health outcomes, particularly among low-income households, children, the elderly, and people with disabilities. In dense urban environments like New York City, these risks are intensified by aging building stock, high housing costs, and unequal access to resources for maintenance and repair. </p>
-<p>This project investigates housing conditions in New York City by examining patterns of housing violations, repeat offenses, and litigation activity from Housing Maintenance Code Violations, Housing Litigations and Housing Maintenance Code Violations NYCHA Properties datasets released by the Department of Housing Preservation and Development  (HPD) and situating them within a broader social vulnerability framework. By spatially and statistically linking housing condition data with demographic and socio-economic indicators at the census tract level, the analysis seeks to illuminate where poor housing conditions are most concentrated, how persistently they occur, and which communities bear the greatest burden. </p>
-<p><a href = "https://www.w3schools.com/html/html_images.asp" target = "_blank">here</a>. What you just saw now is a link using the "a" tag. As you go along, you might see "div" pop up. That's a catch-all for a webpage container, and matters if you want elements to position themselves dynamically or in specific fixed locations, or if you want your page to be more reactive. <a href = "https://www.w3schools.com/html/html_div.asp" target = "_blank">Here's</a> a great reference for that, and hey, while you're at it, poke around the rest of the w3schools site, because it's an excellent resource.</p>
+<h2>Elucidating Housing Conditions in NYC</h2>
+<h6>Author: Jui Shih | GSAPP Urban Planning | Urban Data and Informatics</h6>
 
-<h5>Methdolody and Data</h5>
-<p>This project uses multiple housing conditions datasets documented by HPD available through NYC Open Data portal as well as American Community Survey (ACS) from multiple years datasets. Datasets consist of Housing Maintenance Code Violations, Housing Litigations and Housing Maintenance Code Violations NYCHA Properties released by the Department of Housing Preservation and Development  (HPD) and ACS 5-Year Estimates from 2023, 2020, 2016, and 2012. 
-</p>
-<p>These datasets were cleaned, filtered, and standardized to focus on selected violation codes associated with severe housing conditions, vacate orders, and systemic building-level issues. Housing litigation data were also incorporated to examine buildings with repeated or ongoing legal action, providing insight into enforcement escalation and unresolved housing problems. Interactive maps welcomes you to explore the spatial distribution of these violations, each with additional notes that pops up as your mouse hovers over it. 
-</p>
-<p>To contextualize housing conditions with a broader social vulnerability framework, multiple variables were extracted from the U.S. Census Bureau American Community Survey (ACS) 5-year estimates at the census tract level. Variables related to income, poverty, unemployment, education, disability status, housing tenure, rent burden, household composition, and limited English proficiency were selected and normalized to construct a social vulnerability index. All datasets were joined using GEOIDs and analyzed using Python and mapping techniques. 
-</p>
+<p>The relationship between housing and health has long been recognized, with the condition of housing identified as a major determinant of quality of life, health, and well-being (WHO, 2018; D’Alessandro et al., 2020; Rolfe et al., 2020; City of New York, 2024; OHCHR, 2014). Substandard housing conditions—such as mold, persistent leaks, inadequate heating, pest infestations, and structural deterioration—are closely associated with adverse physical and mental health outcomes, particularly among low-income households, children, the elderly, and people with disabilities. In dense urban environments like New York City, these risks are intensified by aging building stock, high housing costs, and unequal access to resources for maintenance and repair.</p>
+<p>This project investigates housing conditions in New York City by examining patterns of housing violations, repeat offenses, and litigation activity from Housing Maintenance Code Violations, Housing Litigations and Housing Maintenance Code Violations NYCHA Properties datasets released by the Department of Housing Preservation and Development (HPD) and situating them within a broader social vulnerability framework. By spatially and statistically linking housing condition data with demographic and socio-economic indicators at the census tract level, the analysis seeks to illuminate where poor housing conditions are most concentrated, how persistently they occur, and which communities bear the greatest burden.</p>
+<br> <br> <!-- Hardcoded break tag, not the best practice, but in a pinch, it'll do what you need it to do -->
+
+<h5>Methodology and Data</h5>
+<p>This project uses multiple housing conditions datasets documented by HPD available through the NYC Open Data portal as well as American Community Survey (ACS) datasets from multiple years. Datasets consist of Housing Maintenance Code Violations, Housing Litigations, and Housing Maintenance Code Violations NYCHA Properties released by HPD and ACS 5-Year Estimates from 2023, 2020, 2016, and 2012.</p>
+<p>These datasets were cleaned, filtered, and standardized to focus on selected violation codes associated with severe housing conditions, vacate orders, and systemic building-level issues. Housing litigation data were also incorporated to examine buildings with repeated or ongoing legal action, providing insight into enforcement escalation and unresolved housing problems. Interactive maps invite users to explore the spatial distribution of these violations, with additional notes appearing on hover.</p>
+<p>To contextualize housing conditions within a broader social vulnerability framework, multiple variables were extracted from the U.S. Census Bureau American Community Survey (ACS) 5-year estimates at the census tract level. Variables related to income, poverty, unemployment, education, disability status, housing tenure, rent burden, household composition, and limited English proficiency were selected and normalized to construct a social vulnerability index. All datasets were joined using GEOIDs and analyzed using Python and mapping techniques.</p>
+<br> <br> <!-- Hardcoded break tag, not the best practice, but in a pinch, it'll do what you need it to do -->
     
-<h2>Pygal Chart</h2>
-<p> Here, remember that we took our 311 dataset, made a new table with agency, complaint type, and count, only keeping complaint types with greater than 2500 total entries, and then aggregated the data so that we could make a stacked bar chart showing complaint types and their counts across the dataset. Remember that you did this in Python and it created an html document for you. Because this html document has been uploaded to this repository, the html doc you're literally writing right now can call on it and embed it. Cool!
-</p>
+<h3>Mapping Housing Conditions</h3>
+<p>Explore what building violations exist in NYC and how they cluster across the 5 boroughs. Feel free to scroll and zoom in and out to find patterns. Every data point also has additional details - the violation code, short decription, their addresses, neighborhood, when violations were first investigated etc.</p>
+
     
 <center> <!-- I'm doing a center thingy to center my viz -->
     <iframe src="pygalEX.htm" width="750px" height="390px" style="border:none;"></iframe>
 </center>
+<br> <br> <!-- Hardcoded break tag, not the best practice, but in a pinch, it'll do what you need it to do -->
 
-<h2>GeoViews Map</h2>
+    
+<h3>Social Vulnerability Index</h3>
 <p> Here, remember that we grabbed all noise complaints from the 311 dataset and mapped them by NTA. This was also something that we handled entirely in Python, and an html doc was also exported for it. It was interactive to begin with, and it stays interactive as we embed it here. </p>
 <center>
     <iframe src="GeoviewsExample.html" width="750px" height="680px" style="border:none;"></iframe>
