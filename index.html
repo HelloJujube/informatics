@@ -39,7 +39,7 @@
 <p>This project investigates housing conditions in New York City by examining patterns of housing violations, repeat offenses, and litigation activity from Housing Maintenance Code Violations, Housing Litigations and Housing Maintenance Code Violations NYCHA Properties datasets released by the Department of Housing Preservation and Development (HPD) and situating them within a broader social vulnerability framework. By spatially and statistically linking housing condition data with demographic and socio-economic indicators at the census tract level, the analysis seeks to illuminate where poor housing conditions are most concentrated, how persistently they occur, and which communities bear the greatest burden.</p>
 <br> <br>
 
-<h3>Methodology and Data</h3>
+<h3>Methodology</h3>
 <p>This project uses multiple housing conditions datasets documented by HPD available through the NYC Open Data portal as well as American Community Survey (ACS) datasets from multiple years. Datasets consist of Housing Maintenance Code Violations, Housing Litigations, and Housing Maintenance Code Violations NYCHA Properties released by HPD and ACS 5-Year Estimates from 2023, 2020, 2016, and 2012.</p>
 <p>These datasets were cleaned, filtered, and standardized to focus on selected violation codes associated with severe housing conditions, vacate orders, and systemic building-level issues. Housing litigation data were also incorporated to examine buildings with repeated or ongoing legal action, providing insight into enforcement escalation and unresolved housing problems. Interactive maps invite users to explore the spatial distribution of these violations, with additional notes appearing on hover.</p>
 <p>To contextualize housing conditions within a broader social vulnerability framework, multiple variables were extracted from the U.S. Census Bureau American Community Survey (ACS) 5-year estimates at the census tract level. Variables related to income, poverty, unemployment, education, disability status, housing tenure, rent burden, household composition, and limited English proficiency were selected and normalized to construct a social vulnerability index. All datasets were joined using GEOIDs and analyzed using Python and mapping techniques.</p>
@@ -62,7 +62,7 @@
 <h3>Social Vulnerability Index</h3>
 <p> Here, 
 <br> <br> <!-- Hardcoded break tag, not the best practice, but in a pinch, it'll do what you need it to do -->    
-<iframe src="GeoviewsExample.html" width="750px" height="680px" style="border:none;"></iframe>
+<iframe src="GeoviewsExample.html" width="1000px" height="680px" style="border:none;"></iframe>
 
 <br> <br> 
     
