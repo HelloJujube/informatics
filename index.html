@@ -26,7 +26,7 @@
 <h2>Elucidating Housing Conditions in NYC</h2>
 <h4>Author: Jui Shih | GSAPP Urban Planning | Urban Data and Informatics</h4>
     
-<h5>Background</h5>
+<h3>Background</h3>
 <p>The relationship between housing and health has long been recognized, with the condition of housing identified as a major determinant of quality of life, health, and well-being (WHO, 2018; D’Alessandro et al., 2020; Rolfe et al., 2020; City of New York, 2024; OHCHR, 2014). Substandard housing conditions—such as mold, persistent leaks, inadequate heating, pest infestations, and structural deterioration—are closely associated with adverse physical and mental health outcomes, particularly among low-income households, children, the elderly, and people with disabilities. In dense urban environments like New York City, these risks are intensified by aging building stock, high housing costs, and unequal access to resources for maintenance and repair.</p>
 <p>This project investigates housing conditions in New York City by examining patterns of housing violations, repeat offenses, and litigation activity from Housing Maintenance Code Violations, Housing Litigations and Housing Maintenance Code Violations NYCHA Properties datasets released by the Department of Housing Preservation and Development (HPD) and situating them within a broader social vulnerability framework. By spatially and statistically linking housing condition data with demographic and socio-economic indicators at the census tract level, the analysis seeks to illuminate where poor housing conditions are most concentrated, how persistently they occur, and which communities bear the greatest burden.</p>
 <br> <br> <!-- Hardcoded break tag, not the best practice, but in a pinch, it'll do what you need it to do -->
@@ -38,22 +38,29 @@
 <br> <br> <!-- Hardcoded break tag, not the best practice, but in a pinch, it'll do what you need it to do -->
     
 <h3>Mapping Housing Conditions</h3>
-<p>Explore what building violations exist in NYC and how they cluster across the 5 boroughs. Feel free to scroll and zoom in and out to find patterns. Every data point also has additional details - the violation code, short decription, their addresses, neighborhood, when violations were first investigated etc.</p>
+<p>Explore what building violations exist in NYC and how they cluster across the 5 boroughs. Feel free to scroll and zoom in and out to find patterns. Every data point also has additional details - the violation code, short decription, their addresses, neighborhood, when violations were first investigated etc.</p>v
 <iframe src="kepler_ViolationDistribution.html" style="border:none;"></iframe>
-    
 <br> <br> <!-- Hardcoded break tag, not the best practice, but in a pinch, it'll do what you need it to do -->
-
+<iframe src="kepler_VIolationClusters.html" style="border:none;"></iframe>
+<br> <br> <!-- Hardcoded break tag, not the best practice, but in a pinch, it'll do what you need it to do -->
+<h5>Open Housing Litigations</h5>
+<iframe src="kepler_LitigatinoClusters.html" style="border:none;"></iframe>
     
 <h3>Social Vulnerability Index</h3>
-<p> Here, remember that we grabbed all noise complaints from the 311 dataset and mapped them by NTA. This was also something that we handled entirely in Python, and an html doc was also exported for it. It was interactive to begin with, and it stays interactive as we embed it here. </p>
-<center>
-    <iframe src="GeoviewsExample.html" width="750px" height="680px" style="border:none;"></iframe>
-</center>
+<p> Here, 
+<br> <br> <!-- Hardcoded break tag, not the best practice, but in a pinch, it'll do what you need it to do -->    
+<iframe src="GeoviewsExample.html" width="750px" height="680px" style="border:none;"></iframe>
 
 <br> <br> <!-- Hardcoded break tag, not the best practice, but in a pinch, it'll do what you need it to do -->
 
-<p>I was intentional about omitting JavaScript in this example, because we've worked through generating dynamic visualizations in python that circumvent that can of worms. If you want to do crazy stuff with js, you can, and that would go in a "script" tag down here at the bottom of the "body" section. </p>
-<p>Thanks for looking at my webpage. Hopefully things are clearer now. <a href = "https://portal.311.nyc.gov/" target = "_blank"> Here's a link</a> to NYC's 311 portal for reference. Sorry my visualizations have inconsistent labels and legends! I was working on my thesis and got distracted. </p>
+<h5>References</h5>    
+<p> Data Sources: NYC Department of Housing Preservation & Development, U.S. Census Bureau ACS-5 Year Estimates </p>    
+<br> <br> <!-- Hardcoded break tag, not the best practice, but in a pinch, it'll do what you need it to do -->    
+
+<p>Thank You!  Project Website: <a href = "https://hellojujube.github.io/informatics/" target = "_blank"> Here's a link</a> to project website.</p>
+<p>Contact me: Jui Shih | js6676@columbia.edu</p>   
     
+<br> <br> <!-- Hardcoded break tag, not the best practice, but in a pinch, it'll do what you need it to do -->    
+
 </body>
 </html>
