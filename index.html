@@ -2,26 +2,37 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>####Elucidating Housing Conditions in NYC!</title>
+    <title>Elucidating Housing Conditions in NYC!</title>
 
     <!-- This is an html comment, oh yeah, hi, this is where you might add css for styling -->
     <style>
         body {
             margin: 50px;
-            font-family: Helvetica, sans-serif;
-            color: #999999;
+            font-family: Monospace, Helvetica, sans-serif;
+            color: #000000;
         }
     </style>
     </head>
 <body>
 
-<h1>There isn't a singular point to this site, I just want to show you that I sort of know what I'm doing.</h1>
-<p>This is a paragraph tag, which means you can write a paragraph and the chunk of css in the head section will dictate what it looks like. Similarly, you can create whatever tag you want and it'll act as a sort of "link" between your css style and what shows up in the html. The "p" tag is so-called "standard" html/css, but you can make a tag that's called "myspecialtag", and if it's between angled brackets in the html body section, it'll obey whatever css you describe for it in the head section. </p>
-<p>Here's a new paragraph. I wanted to mention that you can embed a bunch of different things in your webpage. Images are a common one, and follow the syntax detailed <a href = "https://www.w3schools.com/html/html_images.asp" target = "_blank">here</a>. What you just saw now is a link using the "a" tag. As you go along, you might see "div" pop up. That's a catch-all for a webpage container, and matters if you want elements to position themselves dynamically or in specific fixed locations, or if you want your page to be more reactive. <a href = "https://www.w3schools.com/html/html_div.asp" target = "_blank">Here's</a> a great reference for that, and hey, while you're at it, poke around the rest of the w3schools site, because it's an excellent resource. </p>
+<h4>Elucidating Housing Conditions in NYC</h4>
+<h5>Author: Jui Shih | GSAPP Urban Planning | Urban Data and Informatics </h5>
+<p>The relationship between housing and health has long been recognized, with the condition of housing identified as a major determinant of quality of life, health, and well-being (WHO, 2018; D’Alessandro et al., 2020; Rolfe et al., 2020; City of New York, 2024; OHCHR, 2014). Substandard housing conditions— such as mold, persistent leaks, inadequate heating, pest infestations, and structural deterioration—are closely associated with adverse physical and mental health outcomes, particularly among low-income households, children, the elderly, and people with disabilities. In dense urban environments like New York City, these risks are intensified by aging building stock, high housing costs, and unequal access to resources for maintenance and repair. </p>
+<p>This project investigates housing conditions in New York City by examining patterns of housing violations, repeat offenses, and litigation activity from Housing Maintenance Code Violations, Housing Litigations and Housing Maintenance Code Violations NYCHA Properties datasets released by the Department of Housing Preservation and Development  (HPD) and situating them within a broader social vulnerability framework. By spatially and statistically linking housing condition data with demographic and socio-economic indicators at the census tract level, the analysis seeks to illuminate where poor housing conditions are most concentrated, how persistently they occur, and which communities bear the greatest burden. </p>
+<p><a href = "https://www.w3schools.com/html/html_images.asp" target = "_blank">here</a>. What you just saw now is a link using the "a" tag. As you go along, you might see "div" pop up. That's a catch-all for a webpage container, and matters if you want elements to position themselves dynamically or in specific fixed locations, or if you want your page to be more reactive. <a href = "https://www.w3schools.com/html/html_div.asp" target = "_blank">Here's</a> a great reference for that, and hey, while you're at it, poke around the rest of the w3schools site, because it's an excellent resource.</p>
 
+<h5>Methdolody and Data</h5>
+<p>This project uses multiple housing conditions datasets documented by HPD available through NYC Open Data portal as well as American Community Survey (ACS) from multiple years datasets. Datasets consist of Housing Maintenance Code Violations, Housing Litigations and Housing Maintenance Code Violations NYCHA Properties released by the Department of Housing Preservation and Development  (HPD) and ACS 5-Year Estimates from 2023, 2020, 2016, and 2012. 
+</p>
+<p>These datasets were cleaned, filtered, and standardized to focus on selected violation codes associated with severe housing conditions, vacate orders, and systemic building-level issues. Housing litigation data were also incorporated to examine buildings with repeated or ongoing legal action, providing insight into enforcement escalation and unresolved housing problems. Interactive maps welcomes you to explore the spatial distribution of these violations, each with additional notes that pops up as your mouse hovers over it. 
+</p>
+<p>To contextualize housing conditions with a broader social vulnerability framework, multiple variables were extracted from the U.S. Census Bureau American Community Survey (ACS) 5-year estimates at the census tract level. Variables related to income, poverty, unemployment, education, disability status, housing tenure, rent burden, household composition, and limited English proficiency were selected and normalized to construct a social vulnerability index. All datasets were joined using GEOIDs and analyzed using Python and mapping techniques. 
+</p>
+    
 <h2>Pygal Chart</h2>
 <p> Here, remember that we took our 311 dataset, made a new table with agency, complaint type, and count, only keeping complaint types with greater than 2500 total entries, and then aggregated the data so that we could make a stacked bar chart showing complaint types and their counts across the dataset. Remember that you did this in Python and it created an html document for you. Because this html document has been uploaded to this repository, the html doc you're literally writing right now can call on it and embed it. Cool!
 </p>
+    
 <center> <!-- I'm doing a center thingy to center my viz -->
     <iframe src="pygalEX.htm" width="750px" height="390px" style="border:none;"></iframe>
 </center>
